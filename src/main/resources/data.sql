@@ -1,16 +1,16 @@
 insert into t_echipe(team, liga, ranking)
-values ('AB123', 'IT',3);
+values ('Steaua Bucuresti', '1',3);
 insert into t_echipe(team, liga, ranking)
-values ('XY456', 'Management',1);
+values ('Dinamo Bucuresti', '1',1);
 
 
 insert into t_fotbalisti(number,name, team, id_echipe)
-values (5,'Max', 'Georgescu',2);
+values (7, 'Florinel Coman','Steaua Bucuresti' ,1);
 insert into t_fotbalisti(number,name, team, id_echipe)
-values (3,'Iron', 'Man',2);
+values (10,'Octavian Popescu', 'Steaua Bucursti',1);
 insert into t_fotbalisti(number,name, team, id_echipe)
-values (3,'John', 'Smith',2);
+values (1,'Stefan Tarnovanu', 'Steaua Bucuresti',1);
 insert into t_fotbalisti(number,name, team, id_echipe)
-values (2,'Max', 'White',2);
+values (11,'Ahmed Bani', 'Dinamo Bucursti',1);
 insert into t_fotbalisti(number,name, team, id_echipe)
-values (1,'Andreea', 'White',2);
+values (5,'Ionel Danciulescu', 'Dinamo Bucursti',1);
