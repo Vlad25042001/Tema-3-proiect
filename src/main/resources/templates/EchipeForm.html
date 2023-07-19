@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Team Form</title>
+    <link rel="stylesheet" th:href="@{/bootstrap/css/bootstrap.min.css}" type="text/css">
+    <style>
+        .form-title {
+            margin:20px 0;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container-fluid">
+
+    <div class="form-title">
+        <h3>Adauga o noua echipa</h3>
+    </div>
+
+    <form action="#" method="post" th:action="@{/submitEchipe}" th:object="${echipe}">
+        <div class="row col-lg-12">
+            <div class="form-group row">
+                <label class="col-12 col-form-label" for="name">Nume:</label>
+                <div>
+                    <input class="form-control" th:field="${echipe.team}" type="text" >
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label class="col-12 col-form-label" for="rank">Ranking:</label>
+                <div>
+                    <input class="form-control" th:field="${echipe.ranking}" type="number" min="1">
+                </div>
+            </div>
+
+            <div class="form-group row mb-3">
+                <label class="col-12 col-form-label" for="liga">Liga:</label>
+                <div>
+                    <select class="form-control" th:field="${echipe.liga}" required >
+                        <option value="">Select one</option>
+                        <option value="Liga1">Liga 1</option>
+                        <option value="Liga2">Liga 2</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="d-grid gap-2 col-6 mx-auto mt-3">
+                <button class="btn btn-primary" type="submit">
+                    Submit
+                </button>
+            </div>
+
+        </div>
+
+    </form>
+
+</div>
+
+</body>
+<script th:src="@{/bootstrap/js/bootstrap.min.js}"/>
+</html>

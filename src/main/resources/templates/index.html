@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Index</title>
+  <style>
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    th, td {
+      padding: 12px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+
+    th:first-child, td:first-child {
+      padding-right: 20px;
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  <h1 class="mt-4" th:text="${greetings}"></h1>
+
+  <h2>Echipe</h2>
+  <table class="table">
+    <thead>
+    <tr>
+      <th scope="col">Team</th>
+      <th scope="col">Ranking</th>
+      <th scope="col">Liga</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="echipa : ${echipeList}">
+      <td th:text="${echipa.team}"></td>
+      <td th:text="${echipa.ranking}"></td>
+      <td th:text="${echipa.liga}"></td>
+    </tr>
+    </tbody>
+  </table>
+
+  <h2>Jucatori</h2>
+  <table class="table">
+    <thead>
+    <tr>
+      <th scope="col">Number</th>
+      <th scope="col">Name</th>
+      <th scope="col">Team</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="fotbalist : ${fotbalistiList}">
+      <td th:text="${fotbalist.number}"></td>
+      <td th:text="${fotbalist.name}"></td>
+      <td th:text="${fotbalist.team}"></td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+</body>
+<script th:src="@{/bootstrap/js/bootstrap.min.js}"/>
+</html>

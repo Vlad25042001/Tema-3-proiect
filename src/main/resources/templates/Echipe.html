@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Echipe</title>
+  <style>
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    th, td {
+      padding: 12px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  <h1 class="mt-4">Echipe</h1>
+  <table class="table">
+    <thead>
+    <tr>
+      <th scope="col" style="padding-right: 20px;">Team</th>
+      <th scope="col">Ranking</th>
+      <th scope="col">Liga</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="echipa : ${echipeList}">
+      <td th:text="${echipa.team}"></td>
+      <td th:text="${echipa.ranking}"></td>
+      <td th:text="${echipa.liga}"></td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+</body>
+<script th:src="@{/bootstrap/js/bootstrap.min.js}"/>
+</html>
